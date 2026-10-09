@@ -46,9 +46,8 @@ export default defineConfig(({ mode }) => {
   const apiTarget = env.GREEN_API_PROXY_TARGET || 'https://api.green-api.com'
 
   return {
-    // Relative asset URLs. The site then works both at a domain root and under
-    // GitHub Pages' /<repo>/ sub-path, without knowing the repo name at build
-    // time (and it keeps working if the repository is renamed).
+    // Relative asset URLs keep the build portable: it works both when served
+    // from a domain root and from a sub-directory.
     base: './',
     plugins: [virtualEnv(env), react()],
     resolve: {
