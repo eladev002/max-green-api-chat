@@ -1,0 +1,32 @@
+{
+  "name": "max-green-api-chat",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "React chat UI for MAX messenger over GREEN-API (test assignment)",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "dev": "vite",
+    "proxy": "node server/proxy.mjs",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc --noEmit && vite build",
+    "test": "node check/build.mjs && node --test .check/contract.test.mjs",
+    "test:watch": "node check/build.mjs && node --test --watch .check/contract.test.mjs",
+    "preview": "vite preview",
+    "start": "node server/proxy.mjs"
+  },
+  "dependencies": {
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "^5.7.3",
+    "vite": "^6.0.11"
+  }
+}
